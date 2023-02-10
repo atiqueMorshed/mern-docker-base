@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 
-export const register = async (req, res, next) => {
+export const register = async (req, res) => {
 	const { username, email, password } = req.body;
 	console.log({ username, email, password });
 	try {
@@ -21,15 +21,15 @@ export const register = async (req, res, next) => {
 	}
 };
 
-export const login = (req, res, next) => {
+export const login = (req, res) => {
 	res.send("Login route.");
 };
 
-export const resetPassword = (req, res, next) => {
+export const resetPassword = (req, res) => {
 	const { resetToken } = req.params;
 	res.send(`Reset password route. ${resetToken}`);
 };
 
-export const forgotPassword = (req, res, next) => {
+export const forgotPassword = (req, res) => {
 	res.send("Forgot password route.");
 };
